@@ -3,6 +3,7 @@
     package="com.moyuchen.study_jetpack">
 
     <application
+        android:name=".StudyJetPackApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
