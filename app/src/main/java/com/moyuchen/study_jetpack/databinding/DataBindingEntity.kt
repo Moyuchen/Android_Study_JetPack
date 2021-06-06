@@ -5,7 +5,6 @@ package com.moyuchen.study_jetpack.databinding
  *@Date  2021/6/3
  *@Des
  **/
-class DataBindingEntity {
-    var name = ""
+class DataBindingEntity constructor(var name:String) {
     var position = ""
 }

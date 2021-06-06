@@ -12,7 +12,7 @@ class DataBindingActivity : AppCompatActivity() {
             this,
             R.layout.activity_data_binding
         ) as ActivityDataBindingBinding
-        var entity = DataBindingEntity()
+        var entity = DataBindingEntity("")
         entity.name = "张三"
         entity.position = "北京"
         dataBinding.dataBindingEntity = entity

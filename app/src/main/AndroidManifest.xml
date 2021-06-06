@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.moyuchen.study_jetpack">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:name=".StudyJetPackApp"
@@ -12,17 +12,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Study_Jetpack">
-        <activity android:name=".databinding.OwnerBindingAdapterActivity">
+        <activity android:name=".databinding.BaseObservableActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".databinding.DataBindingActivity">
+        <activity android:name=".databinding.OwnerBindingAdapterActivity">
 
         </activity>
-        <activity android:name=".viewmodel.ViewModelActivity"></activity>
+        <activity android:name=".databinding.DataBindingActivity"></activity>
+        <activity android:name=".viewmodel.ViewModelActivity" />
         <activity android:name=".MainActivity" />
     </application>
 
