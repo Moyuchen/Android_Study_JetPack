@@ -26,31 +26,18 @@
             android:orientation="horizontal"
             app:layout_constraintGuide_percent="0.5" />
 
-        <TextView
-            android:id="@+id/databinding_name"
-            android:layout_width="96dp"
-            android:layout_height="44dp"
-            android:layout_marginTop="28dp"
-            android:text="@{dataBindingEntity.name}"
-            android:textSize="20sp"
-            android:gravity="center"
+        <include
+            layout="@layout/include_databinding_test"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            app:entity="@{dataBindingEntity}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/guideline" />
 
-        <TextView
-            android:id="@+id/dataBinding_position"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="36dp"
-            android:text="@{dataBindingEntity.position}"
 
-            android:textSize="18sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/databinding_name" />
     </androidx.constraintlayout.widget.ConstraintLayout>
     <data>
         <variable
