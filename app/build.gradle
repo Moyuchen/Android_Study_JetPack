@@ -17,10 +17,11 @@ android {
         versionName "1.0"
 
 
-        dataBinding {
-            enabled = true
-        }
+
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+
+
 
     }
 
@@ -36,6 +37,10 @@ android {
     }
     kotlinOptions {
         jvmTarget = '1.8'
+    }
+    buildFeatures {
+        dataBinding  true
+        viewBinding  true
     }
 }
 

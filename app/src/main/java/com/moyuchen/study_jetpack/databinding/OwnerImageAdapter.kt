@@ -12,16 +12,16 @@ import com.bumptech.glide.Glide
 internal object OwnerImageAdapter {
 
     @JvmStatic
-     @BindingAdapter("image","defaultLocalImage",requireAll = false)
-     fun setNetWorkImage(imageView: ImageView,url:String?,localImage:Int){
+    @BindingAdapter("image", "defaultLocalImage", requireAll = false)
+    fun setNetWorkImage(imageView: ImageView, url: String?, localImage: Int) {
 
         if (!url.isNullOrEmpty()) {
             Glide.with(imageView.context).load(url).asBitmap().into(imageView)
-        }else{
+        } else {
             imageView.setImageResource(localImage)
         }
 
 
-     }
+    }
 
 }

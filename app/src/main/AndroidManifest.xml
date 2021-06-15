@@ -12,17 +12,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Study_Jetpack">
-        <activity android:name=".databinding.BaseObservableActivity">
+        <activity android:name=".databinding.recycleview.RecycleViewActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".databinding.OwnerBindingAdapterActivity">
+        <activity android:name=".databinding.BaseObservableFieldActivity">
 
         </activity>
-        <activity android:name=".databinding.DataBindingActivity"></activity>
+        <activity android:name=".databinding.BaseObservableActivity"></activity>
+        <activity android:name=".databinding.OwnerBindingAdapterActivity" />
+        <activity android:name=".databinding.DataBindingActivity" />
         <activity android:name=".viewmodel.ViewModelActivity" />
         <activity android:name=".MainActivity" />
     </application>
