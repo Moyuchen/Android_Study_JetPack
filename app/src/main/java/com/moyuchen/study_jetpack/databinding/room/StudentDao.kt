@@ -1,5 +1,6 @@
 package com.moyuchen.study_jetpack.databinding.room
 
+import androidx.lifecycle.LiveData
 import androidx.room.*
 
 /**
@@ -20,7 +21,7 @@ interface StudentDao {
     fun updateStudent(vararg  student: Student)
 
     @Query("SELECT * FROM student")
-    fun getStudents():List<Student>
+    fun getStudents():LiveData<List<Student>>
 
 
 }
