@@ -24,6 +24,9 @@ class Student {
     @ColumnInfo(name="age",typeAffinity = ColumnInfo.INTEGER)
     var age:Int = 0
 
+    @ColumnInfo(name="sex",typeAffinity = ColumnInfo.INTEGER)
+    var sex:Int = 1
+
     @Ignore
     constructor(id: Int, name: String, age: Int) {
         this.id = id
