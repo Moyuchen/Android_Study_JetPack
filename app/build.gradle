@@ -18,7 +18,12 @@ android {
 
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-
+//        配置scheme文件导出位置
+        javaCompileOptions{
+            annotationProcessorOptions{
+                arguments = ["room.schemaLocation":"$projectDir/schemas".toString()]
+            }
+        }
 
     }
 

@@ -13,7 +13,7 @@ import androidx.sqlite.db.SupportSQLiteDatabase
  *@Des
  **/
 
-@Database(entities = [Student::class], version = 2, exportSchema = false)
+@Database(entities = [Student::class], version = 2, exportSchema = true)
 abstract class StudentDataBase : RoomDatabase() {
     companion object {
 
@@ -22,12 +22,14 @@ abstract class StudentDataBase : RoomDatabase() {
         fun instance(context: Context): StudentDataBase {
             val instance: StudentDataBase by lazy(mode = LazyThreadSafetyMode.SYNCHRONIZED) {
                 Room.databaseBuilder(context.applicationContext,StudentDataBase::class.java, DATABASE_NAME)
-                    .addMigrations(MIGRATION_1_2).build()
+                    .addMigrations(MIGRATION_1_2)
+//                    .fallbackToDestructiveMigration()
+                    .build()
             }
             return instance
         }
 
-        final val MIGRATION_1_2:Migration = object :Migration(1,2){
+        private final val MIGRATION_1_2:Migration = object :Migration(1,2){
             override fun migrate(database: SupportSQLiteDatabase) {
                 database.execSQL("ALTER TABLE student ADD COLUMN sex INTEGER NOT NULL DEFAULT 1")
             }

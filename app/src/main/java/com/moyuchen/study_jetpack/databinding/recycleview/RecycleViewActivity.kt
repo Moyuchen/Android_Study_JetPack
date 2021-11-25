@@ -22,7 +22,7 @@ class RecycleViewActivity : AppCompatActivity() {
 
     }
 
-    fun getData(): List<TestEntity> {
+    private fun getData(): List<TestEntity> {
         var data = mutableListOf<TestEntity>()
         var entity:TestEntity? = null
         for (index in 1..10){
