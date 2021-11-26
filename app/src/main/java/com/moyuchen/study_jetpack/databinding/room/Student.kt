@@ -20,12 +20,12 @@ class Student {
     @ColumnInfo(name = "name",typeAffinity = ColumnInfo.TEXT)
     var name:String = ""
 
-
     @ColumnInfo(name="age",typeAffinity = ColumnInfo.INTEGER)
     var age:Int = 0
 
-    @ColumnInfo(name="sex",typeAffinity = ColumnInfo.INTEGER)
-    var sex:Int = 1
+    @ColumnInfo(name="sex",typeAffinity = ColumnInfo.TEXT,defaultValue = "M")
+    var sex:String = "M"
+
 
     @Ignore
     constructor(id: Int, name: String, age: Int) {
